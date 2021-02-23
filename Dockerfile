@@ -13,4 +13,6 @@ RUN yum makecache && \
 	tar -zxf cmake-3.12.4-Linux-x86_64.tar.gz && \
 	rm cmake-3.12.4-Linux-x86_64.tar.gz
 
-ENV PATH="/opt/rh/devtoolset-7/root/usr/bin:/opt/cmake-3.12.4-Linux-x86_64/bin:${PATH}"
+ENV PATH="/opt/cmake-3.12.4-Linux-x86_64/bin:/opt/rh/devtoolset-7/root/usr/bin:${PATH}"
+
+ENV LD_LIBRARY_PATH="/opt/rh/devtoolset-7/root/usr/lib:${LD_LIBRARY_PATH}"
